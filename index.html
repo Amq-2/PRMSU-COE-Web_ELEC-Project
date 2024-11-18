@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <header class="navbar-header">
+    <header class="navbar-header" style="margin-top: 30px;">
         <div class="navbar-container">
             <div class="nav-left">
                 <a href="#" class="nav-link">HOME</a>
@@ -33,6 +33,29 @@
             </div>
         </div>
     </header>
+    <!-- New Mobile Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-scroll fixed-top" id="navbar-mobile-view">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="img/Logo.png" 
+                 alt="Logo" 
+                 class="logo-img"
+                 style="width: 50px; height: 50px; margin-left: 7px;">
+            <span class="brand-text" style="color: #FE7741; font-weight: bolder; margin-left: 10px;">PRMSU COE</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">HOME</a>
+                    <a href="#" class="nav-link">INSTRUCTION</a>
+                    <a href="#" class="nav-link">RESEARCH</a>
+                    <a href="#" class="nav-link">EXTENSION</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!-- Hero Section -->
     <section class="hero">
         <img src="img/Banner.png" alt="Background Image" class="hero-bg">
@@ -50,26 +73,26 @@
         <h2 class="mb-4 text-center" style="color: #FE7741; font-weight: bolder;">GALLERY</h2>
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
-                <a href="" data-lightbox="gallery" data-title="Gallery Image 1">
+                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 1">
                     <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 1" />
                 </a>
-                <a href="" data-lightbox="gallery" data-title="Gallery Image 2">
+                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 2">
                     <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 2" />
                 </a>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <a href="" data-lightbox="gallery" data-title="Gallery Image 3">
+                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 3">
                     <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 3" />
                 </a>
-                <a href="" data-lightbox="gallery" data-title="Gallery Image 4">
+                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 4">
                     <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 4" />
                 </a>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-                <a href="" data-lightbox="gallery" data-title="Gallery Image 5">
+                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 5">
                     <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 5" />
                 </a>
-                <a href="" data-lightbox="gallery" data-title="Gallery Image 6">
+                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 6">
                     <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 6" />
                 </a>
             </div>
@@ -120,7 +143,7 @@
         </div>
     </div>
     <!-- Announcement Section -->
-    <div class="container mt-3 mb-5" style="max-width: 1293px;">
+    <div class="container mt-3" style="max-width: 1293px;">
         <div class="outer-container">
             <h2 class="mb-2 mt-4 text-center"  style="color: #FE7741; font-weight: bolder;">ANNOUNCEMENT</h2>
             <p class="text-center">List of latest announcements</p>
@@ -204,6 +227,26 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <h3 class="text-center mb-4" style="color: #FE7741; font-weight: bolder;">OUR LOCATION</h3>
+        <div id="map" style="height: 500px; width: 100%;"></div>
+        <script>
+            function initMap() {
+                const prmsuCOE = { lat: 15.317817014476557, lng: 119.98271521096423 };
+                const map = new google.maps.Map(document.getElementById('map'), {
+                    center: prmsuCOE,
+                    zoom: 18,
+                });
+                
+                const marker = new google.maps.Marker({
+                    position: prmsuCOE,
+                    map: map,
+                    title: 'PRMSU COE',
+                });
+            }
+        </script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8oPpg8w3vaK5ZI-BveccN2iApj5MM604&libraries=places&callback=initMap"></script>
+    </div>
     <!-- Footer Section -->
     <footer class="bg-light py-4 mt-5" id="footerMain">
         <div class="container">
@@ -254,6 +297,32 @@
             'resizeDuration': 200,
             'wrapAround': true,
             'albumLabel': "Image %1 of %2" // Optional: custom label for image count
+        });
+        $(".navbar-toggler").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const mobileMenu = document.querySelector(".mobile-menu");
+
+            hamburger.addEventListener("click", function () {
+                mobileMenu.classList.toggle("active"); // Toggles the "active" class
+                hamburger.classList.toggle("is-active"); // Toggles the "is-active" class for animation
+            });
+        });
+        // JavaScript to make navbar fixed on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar-header');
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > 50) {
+                // Add fixed class when scrolling down
+                navbar.classList.add('navbar-fixed');
+            } else {
+                // Remove fixed class when at the top
+                navbar.classList.remove('navbar-fixed');
+            }
         });
     </script>
 </body>
