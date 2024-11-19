@@ -1,0 +1,558 @@
+<html lang="en">
+<head>
+  <link rel="icon" href="img_src/COE logo.ico" type="image/ico">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>PRMSU College of Engineering</title>   
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure the page takes the full height */
+    }
+    .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu {
+      display: block;
+    }
+
+  </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <header class="navbar-header">
+      <div class="navbar-container">
+          <a href="#" class="nav-link">HOME</a>
+          <div class="relative dropdown">
+              <a class="nav-link cursor-pointer" href="#" onclick="toggleDropdown(event, 'instructionDropdown')">INSTRUCTION</a>
+              <ul id="instructionDropdown" class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg hidden dropdown-menu">
+                  <li><a class="block px-5 py- hover:bg-gray-200 hover:text-orange-600" href="instruction-CO.html">Curricular Offerings</a></li>
+                  <li><a class="block px-5 py-2 hover:bg-gray-200 hover:text-orange-600" href="instruction-F.html">Faculty</a></li>
+              </ul>
+
+          </div>
+          
+          <div class="nav-center">
+              <img src="img/logo.png" alt="College of Engineering Logo" class="logo">
+          </div>
+          <div class="nav-right">
+              <li class="relative dropdown">
+                  <a class="nav-link hover:underline cursor-pointer hover:text-orange-600" href="#" onclick="toggleDropdown(event, 'researchDropdown')">RESEARCH</a>
+                  <ul id="researchDropdown" class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg hidden dropdown-menu">
+                    <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsce.html">BSCE</a></li>
+                    <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bscpe.html">BSCpE</a></li>
+                    <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsee.html">BSEE</a></li>
+                    <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsme.html">BSME</a></li>
+                    <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsem.html">BSEM</a></li>
+                  </ul>
+              </li>
+                <li><a class="nav-link hover:underline  hover:text-orange-600" href="extension.html">EXTENSION</a></li>
+                <li><a class="nav-link hover:underline hover:text-orange-600" href="history.html">HISTORY</a></li>
+              </ul>
+              <button class="search-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </header>
+  <!-- New Mobile Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-scroll fixed-top" id="navbar-mobile-view">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="img/Logo.png" 
+               alt="Logo" 
+               class="logo-img"
+               style="width: 50px; height: 50px; margin-left: 7px;">
+          <span class="brand-text" style="color: #FE7741; font-weight: bolder; margin-left: 10px;">PRMSU COE</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <a href="#" class="nav-link">HOME</a>
+              <div class="relative dropdown">
+                  <a class="nav-link cursor-pointer" href="#" onclick="toggleDropdown(event, 'instructionDropdown')">INSTRUCTION</a>
+                  <ul id="instructionDropdown" class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg hidden dropdown-menu">
+                      <li><a class="block px-5 py- hover:bg-gray-200 hover:text-orange-600" href="instruction-CO.html">Curricular Offerings</a></li>
+                      <li><a class="block px-5 py-2 hover:bg-gray-200 hover:text-orange-600" href="instruction-F.html">Faculty</a></li>
+                  </ul>
+   
+              </div>
+              
+              <div class="nav-center">
+                  <img src="img/logo.png" alt="College of Engineering Logo" class="logo">
+              </div>
+              <div class="nav-right">
+                  <li class="relative dropdown">
+                      <a class="nav-link hover:underline cursor-pointer hover:text-orange-600" href="#" onclick="toggleDropdown(event, 'researchDropdown')">RESEARCH</a>
+                      <ul id="researchDropdown" class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg hidden dropdown-menu">
+                        <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsce.html">BSCE</a></li>
+                        <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bscpe.html">BSCpE</a></li>
+                        <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsee.html">BSEE</a></li>
+                        <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsme.html">BSME</a></li>
+                        <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsem.html">BSEM</a></li>
+                      </ul>
+                  </li>
+                  <li><a class="nav-link hover:underline  hover:text-orange-600" href="extension.html">EXTENSION</a></li>
+                  <li><a class="nav-link hover:underline hover:text-orange-600" href="history.html">HISTORY</a></li>
+                  </ul>
+                  <button class="search-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="11" cy="11" r="8"></circle>
+                          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      </svg>
+                  </button>
+              </div>
+          </ul>
+      </div>
+  </nav>
+  <script>
+      function toggleDropdown(event, dropdownId) {
+        event.preventDefault();
+        const dropdown = document.getElementById(dropdownId);
+        dropdown.classList.toggle('hidden');
+        dropdown.parentElement.classList.toggle('open');
+      }
+  
+      document.addEventListener('click', function(e) {
+        const dropdowns = document.querySelectorAll('.dropdown-menu');
+        dropdowns.forEach(menu => {
+          if (!menu.contains(e.target) && !menu.previousElementSibling.contains(e.target)) {
+            menu.classList.add('hidden');
+            menu.parentElement.classList.remove('open');
+          }
+        });
+      });
+  
+      // Function to show/hide the search input field
+      function toggleSearchInput() {
+        const searchInput = document.getElementById("searchInput");
+        searchInput.classList.toggle("show");
+        if (searchInput.classList.contains("show")) {
+          searchInput.focus();
+        }
+      }
+  
+      // Function to handle Enter key press in search input
+      function handleSearchEnter(event) {
+        if (event.key === "Enter") {
+          const query = event.target.value;
+          if (query) {
+            window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+          }
+        }
+      }
+      // Select the search input element
+  
+      const searchButton = document.querySelector('.search-input');
+  
+      // Listen for the 'Enter' key press on the search input
+      searchButton.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+          // Store the input value in localStorage
+          localStorage.setItem('searchQuery', searchButton.value);
+  
+          // Redirect to search.html
+          window.location.href = 'search.html';
+      }
+      });
+      document.addEventListener('DOMContentLoaded', () => {
+          const urlParams = new URLSearchParams(window.location.search);
+          const searchTerm = urlParams.get('search');
+  
+          if (searchTerm) {
+              // Normalize search term for case-insensitive matching
+              const normalizedSearchTerm = searchTerm.toLowerCase();
+  
+              // Find the first element containing the search term
+              const allElements = document.body.querySelectorAll('*');
+              for (const el of allElements) {
+                  if (el.children.length === 0) {
+                      const textContent = el.textContent.toLowerCase();
+                      if (textContent.includes(normalizedSearchTerm)) {
+                          // Scroll to the element and optionally highlight it
+                          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                          el.style.backgroundColor = '#ffebcc'; // Temporary highlight
+                          break;
+                      }
+                  }
+              }
+          }
+      });
+    </script>
+
+  <main class="p-4 mt-16">
+   <div class="text-sm text-gray-600 mb-4">
+    <a class="text-blue-600" href="#">
+     Instruction
+    </a>
+    &gt;&gt; Faculty
+   </div>
+   <section class="mb-8">
+    <div class="bg-orange-600 text-white p-4">
+     <h2 class="text-xl font-bold">
+      College Dean
+     </h2>
+    </div>
+    <div class="bg-gray-100 p-4 flex">
+     <img alt="Portrait of Gilbert D. Deboma" class="ml-8 mr-4 w-64 h-64 shadow-md shadow-lg rounded-lg object-cover" src="img\sir deboma.jpg"/>
+     <div>
+      <h3 class="text-lg font-bold">
+       GILBERT D. DEBOMA, REE, M.Eng.
+      </h3>
+      <p>
+       Engr. Gilbert D. Deboma is a faculty of the College of Engineering for 24 years with an Academic Rank of Associate Professor V. He is a graduate of Bachelor of Science in Electrical Engineering at Technological Institute of the Philippines – Quezon City. He finished his Master of Science in Electronics Engineering at Andong National University – South Korea. He is currently taking up PhD in Agricultural Engineering at Central Luzon State University. Engr. Deboma is an active member of The Institute of Integrated Electrical Engineers, Inc., the accredited professional organization of electrical practitioners of the Philippines. He is the current dean of the College of Engineering and concurrent Program Chairperson of the Electrical Engineering Department.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="mb-8">
+    <div class="bg-orange-600 text-white p-4">
+     <h2 class="text-xl font-bold">
+      Program Chairpersons
+     </h2>
+    </div>
+    <div class="bg-gray-100 p-4 flex mb-4">
+     <img alt="Portrait of Ferdinand D. Talibgan" class="ml-8 mr-4 w-48 h-48 shadow-md shadow-lg rounded-lg object-cover" src="img/sir tabligan.jpg"/>
+     <div>
+      <h3 class="text-lg font-bold text-red-600">
+       BS Civil Engineering (BSCE)
+      </h3>
+      <h4 class="text-lg font-bold">
+       FERDINAND D. TABLIGAN, RCE, M.Eng.
+      </h4>
+      <p>
+       Contents to be published soon...
+      </p>
+     </div>
+    </div>
+    <div class="bg-gray-100 p-4 flex mb-4">
+     <img alt="Portrait of Melojean C. Marave" class="ml-8 mr-4 w-48 h-48 shadow-md shadow-lg rounded-lg object-cover" src="img/maam marave.jpg"/>
+     <div>
+      <h3 class="text-lg font-bold text-red-600">
+       BS Computer Engineering (BSCpE)
+      </h3>
+      <h4 class="text-lg font-bold">
+       MELOJEAN C. MARAVE, LPT, MSIT
+      </h4>
+      <p>
+       Engr. Melojean C. Marave has an extensive educational background, including a Doctorate in Information Technology from the Technological Institute of the Philippines and a Doctor of Education Major in Educational Management from Ramon Magsaysay Technological University, Iba, Zambales. She holds a Master of Science in Information Technology from the Polytechnic University of the Philippines – Sta. Mesa, Manila. Additionally, she completed a Post-Baccalaureate Certificate in Professional Education at Ramon Magsaysay Technological University, Main Campus, Iba, Zambales, and a Training Course in IT Course Design and Development from the National Computer Center, Diliman, Quezon City. Engr. Marave finished CISCO Certified Network Associate Exploration 1, 2, 3, and 4 modules from UP Information Technology Training Center, UP Diliman QC. She earned her Bachelor of Science in Computer Engineering in October 2001. Engr. Marave currently serves as the BS Computer Engineering Program Chairperson at PRMSU Iba, Zambales, and has been actively involved in various faculty and extension works within the university, with a special highlight on community extension. She is a licensed professional teacher and holds professional memberships with Colleges and Universities of the Philippines and the Institute of Computer Engineers of the Philippines (ICpEP). She is a Member and Auditor of the Accrediting Agency of Chartered Colleges and Universities in the Philippines (AACCUP) and Internal Auditor of the International Standard Organization (ISO). Additionally, she has contributed significantly to youth leadership programs and has received recognition for her outstanding contributions and leadership.
+      </p>
+     </div>
+    </div>
+    <div class="bg-gray-100 p-4 flex mb-4">
+     <img alt="Portrait of Gilbert D. Deboma" class="ml-8 mr-4 w-48 h-48 shadow-md shadow-lg rounded-lg object-cover" src="img/sir deboma.jpg"/>
+     <div>
+      <h3 class="text-lg font-bold text-red-600">
+       BS Electrical Engineering (BSEE)
+      </h3>
+      <h4 class="text-lg font-bold">
+       GILBERT D. DEBOMA, REE, M.Eng.
+      </h4>
+      <p>
+       Engr. Gilbert D. Deboma is a faculty of the College of Engineering for 24 years with an Academic Rank of Associate Professor V. He is a graduate of Bachelor of Science in Electrical Engineering at Technological Institute of the Philippines – Quezon City. He finished his Master of Science in Electronics Engineering at Andong National University – South Korea. He is currently taking up PhD in Agricultural Engineering at Central Luzon State University. Engr. Deboma is an active member of The Institute of Integrated Electrical Engineers, Inc., the accredited professional organization of electrical practitioners of the Philippines. He is the current dean of the College of Engineering and concurrent Program Chairperson of the Electrical Engineering Department.
+      </p>
+     </div>
+    </div>
+    <div class="bg-gray-100 p-4 flex mb-4">
+     <img alt="Portrait of Marlon James A. Dedicatoria" class=" ml-8 mr-4 w-48 h-48 shadow-md shadow-lg rounded-lg object-cover" src="img/doc marlon.jpg"/>
+     <div>
+      <h3 class="text-lg font-bold text-red-600">
+       BS Mechanical Engineering (BSME)
+      </h3>
+      <h4 class="text-lg font-bold">
+       MARLON JAMES A. DEDICATORIA, RMEE, Ph.D.
+      </h4>
+      <p>
+       Dr. Marlon James A. Dedicatoria is a licensed mechanical engineer and currently serves as the Vice President for Research and Development, as well as the Dean of the College of Engineering at PRMSU. He has been actively involved in various faculty and extension works within the Bachelor of Science in Mechanical Engineering (BSME) program at PRMSU’s College of Engineering. Additionally, he holds a lecturing position at the university’s graduate school, where he teaches mathematics courses.
+      </p>
+      <p>
+       Dr. Dedicatoria earned his Bachelor of Science degree in Mechanical Engineering from Ramon Magsaysay Technological University in 2006. Subsequently, he pursued his Master of Science in Mechanical Design and Systems Engineering at Andong National University, South Korea, graduating in 2010. He furthered his academic pursuits by completing his PhD in Mechanical Design and Systems Engineering from Andong National University in 2013. Following his doctoral studies, he served as a post-doctoral fellow at the same university’s Materials Behavior Evaluation Laboratory under the guidance of Prof. Hyung-Seop Shin from 2013 to 2014.
+      </p>
+      <p>
+       His research publications primarily focus on the electromechanical property evaluation of high-temperature superconductors. Presently, Dr. Dedicatoria holds the position of Professor 3 at PRMSU.
+      </p>
+     </div>
+    </div>
+    <div class="bg-gray-100 p-4 flex mb-4">
+     <img alt="Portrait of Dorothy Joyce Solpico Desierto" class="ml-8 mr-4 w-48 h-48 shadow-md shadow-lg rounded-lg object-cover" src= "img/maam dorothy.png"/>
+     <div>
+      <h3 class="text-lg font-bold text-red-600">
+       BS Mining Engineering (BSEM)
+      </h3>
+      <h4 class="text-lg font-bold">
+       DOROTHY JOYCE SOLPICO DESIERTO
+      </h4>
+      <p>
+       Contents to be published soon...
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="mb-8">
+    <div class="bg-orange-600 text-white p-4">
+        <h2 class="text-xl font-bold">Faculty Members</h2>
+    </div>
+    <!-- Civil Engineering Section -->
+    <div class="bg-gray-100 p-4">
+        <h3 class="text-lg font-bold text-red-600">Civil Engineering</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Ronel E. Romero" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir ronel.png"/>
+                <p>Engr. RONEL E. ROMERO</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Jemar Dalusong" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir jemar.png"/>
+                <p>Engr. JEMAR DALUSONG</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Raymond Aramay" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir aramay.png"/>
+                <p>Engr. RAYMOND ARAMAY</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Abraham Antonio" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir abby.PNG"/>
+                <p>Engr. ABRAHAM ANTONIO</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Ma. Thereza Vicho" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam vicho.jpg"/>
+                <p>Engr. MA. THEREZA VICHO</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Victor D. Vicho" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir vicho.jpg"/>
+                <p>Engr. VICTOR D. VICHO</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Elena Lyn Tombale" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam tombale.jpg"/>
+                <p>Engr. ELENA LYN TOMBALE</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Ryv Anthony Bisquera" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir bisquera.jpg"/>
+                <p>Engr. RYV ANTHONY BISQUERA</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Joven Manangan" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir manangan.jpg"/>
+                <p>Engr. JOVEN MANANGAN</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Eloisa Romulo" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/ma'am eloi.jpg"/>
+                <p>Engr. ELOISA ROMULO</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Marko Antonio Fernandez" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir marko.jpg"/>
+                <p>Engr. MARKO ANTONIO FERNANDEZ</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Zendree Aramay" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir aramay.png"/>
+                <p>Engr. ZENDREE ARAMAY</p>
+            </div>
+        </div>
+    <!-- Computer Engineering Section -->
+    <div class="bg-gray-100 p-4 mt-8">
+        <h3 class="text-lg font-bold text-red-600">Computer Engineering</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Ricky S. Barrera" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir ricky.png"/>
+                <p>Engr. RICKY S. BARRERA</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Bryan Carlos B. Acain" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir bryan.png"/>
+                <p>Engr. BRYAN CARLOS B. ACAIN</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Oliver A. Sabado, Jr." class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img_/sir sabado.jpg"/>
+                <p>Engr. OLIVER A. SABADO, JR.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Dionisio M. Martin, Jr." class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir dionisio.jpg"/>
+                <p>Engr. DIONISIO M. MARTIN, JR.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Froilan G. Cantillo" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir froilan.jpg"/>
+                <p>Engr. FROILAN G. CANTILLO</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Allan Jay L. Morillo" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src =  "img/sir allan.png"/>
+                <p>Engr. ALLAN JAY L. MORILLO</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img alt="Portrait of Engr. Dennize Jiana R. Basilio" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src ="img/maam jiana.jpg"/>
+              <p>Engr. DENNIZE JIANA R. BASILIO</p>
+          </div>
+          <div class="flex flex-col items-center">
+              <img alt="Portrait of Engr. Kirk Lee P. Leomo" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir kirk.png"/>
+              <p>Engr. KIRK LEE P. LEOMO</p>
+          </div>
+          <div class="flex flex-col items-center">
+              <img alt="Portrait of Engr. Marteen Beravon Remolacio" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src ="img/maam marteen.jpg"/>
+              <p>Engr. MARTEEN BERAVON REMOLACIO</p>
+          </div>
+        </div>
+    <!-- Electrical Engineering Section -->
+    <div class="bg-gray-100 p-4 mt-8">
+        <h3 class="text-lg font-bold text-red-600">Electrical Engineering</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Mark Lester Parallag" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir parallag.jpg"/>
+                <p>Engr. MARK LESTER PARALLAG</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Doris H. Marquez" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam doris.png"/>
+                <p>Engr. DORIS H. MARQUEZ</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Senato Orianza" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir senato.jpg"/>
+                <p>Engr. SENATO ORIANZA</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Christian Marafina" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir marifina.jpg"/>
+                <p>Engr. CHRISTIAN MARAFINA</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Fernan Edarad" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir edrad.JPG"/>
+                <p>Engr. FERNAN EDARAD</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Rue Lei Balicaco" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir balicaco.jpg"/>
+                <p>Engr. RUE LEI BALICACO</p>
+            </div>
+          </div>
+    <!-- Mechanical Engineering Section -->
+    <div class="bg-gray-100 p-4 mt-8">
+        <h3 class="text-lg font-bold text-red-600">Mechanical Engineering</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Ma. Karla Jessica Bautista" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/maam bautista.jpg"/>
+                <p>Engr. MA. KARLA JESSICA BAUTISTA</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Jasper Anthony Cuevas" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/sir cuevas.jpg"/>
+                <p>Engr. JASPER ANTHONY CUEVAS</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Michael Romualdo" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir romualdo.jpg"/>
+                <p>Engr. MICHAEL ROMUALDO</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Nhoelle Padua" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir padua.jpg"/>
+                <p>Engr. NHOELLE PADUA</p>
+            </div>
+          </div>
+    <!-- Allied and General Education Section -->
+    <div class="bg-gray-100 p-4 mt-8">
+        <h3 class="text-lg font-bold text-red-600">Allied and General Education</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Melissa M. Ebue" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam ebue.png"/>
+                <p>Engr. MELISSA M. EBUE</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Clarisse Hope M. Rico" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src = "img/maam rico.jpg"/>
+                <p>Engr. CLARISSE HOPE M. RICO</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Dr. Emelyn E. Bugayong" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam bugayong.png"/>
+                <p>Dr. EMELYN E. BUGAYONG</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Engr. Cindy Dullas" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam dulas.jpg"/>
+                <p>Engr. CINDY DULLAS</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img alt="Portrait of Dr. Edna Punzalan" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam punzalan.JPG"/>
+                <p>Dr. EDNA PUNZALAN</p>
+            </div>
+              <div class="flex flex-col items-center">
+                  <img alt="Portrait of Ms. Jane D. Danila" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam danila.jpg"/>
+                  <p>Ms. JANE D. DANILA</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <img alt="Portrait of Mr. Luciano Medrano" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/sir medrano.jpg"/>
+                  <p>Mr. LUCIANO MEDRANO</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <img alt="Portrait of Ms. April Besa" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam besa.jpg"/>
+                  <p>Ms. APRIL BESA</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <img alt="Portrait of Ms. Madelle Santos" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam madelle.jpg"/>
+                  <p>Ms. SANTOS, MADELLE</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <img alt="Portrait of Ms. Monica Parangat" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam parangat.jpg"/>
+                  <p>Ms. MONICA PARANGAT</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <img alt="Portrait of Ms. Karen Quitoriano" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam quitoriano.jpg"/>
+                  <p>Ms. KAREN QUITORIANO</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <img alt="Portrait of Ms. Jio Erika Pelinio" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam pelinio.jpg"/>
+                  <p>Ms. JIO ERIKA PELINIO</p>
+              </div>
+              <div class="flex flex-col items-center">
+                  <img alt="Portrait of Ms. Mae Joyce Velarde" class="mb-2 w-36 h-36 shadow-md shadow-lg rounded-lg object-cover" src="img/maam velarde.jpg"/>
+                  <p>Ms. MAE JOYCE VELARDE</p>
+              </div>
+            </div>
+          </div>
+   </section>
+  </main>
+    <!-- Footer Section -->
+    <footer class="bg-light py-4 mt-5" id="footerMain">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <!-- Logo and description -->
+          <div class="col-md-6 d-flex align-items-center">
+            <a href="">
+              <img src="img/Logo.png"
+                   alt="ojt" class="img-fluid grayscale" width="80" height="80">
+            </a>
+            <div class="pl-3 mt-3">
+              <h5 class="mb-0">PRMSU</h5>
+              <p style="font-size: 18px">College of Engineering</p>
+          </div>
+          </div>
+          <!-- Social media icon -->
+          <div class="col-md-3 text-md-right text-center mt-3 mt-md-0">
+            <a href="https://www.facebook.com/profile.php?id=100057567874785" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook"
+                   viewBox="0 0 24 24">
+                <path d="M9 8H6v4h3v12h5V12h4l1-4h-5V6c0-1 .334-1 1-1h3V0h-4c-3 0-4 1-4 4v4z"/>
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+          </div>
+        </div>    
+        <!-- Divider -->
+        <hr class="my-4">
+        <!-- Links and Copyright -->
+        <div class="row align-items-center">
+          <div class="col-md-6 d-flex flex-wrap justify-content-center justify-content-md-start mb-3 mb-md-0">
+            <a href="" class="mr-3">Quality Policy</a>
+          </div>
+          <div class="col-md-6 text-center text-md-right">
+            <span>Beta Version - &copy; 2024</span>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <!-- Scripts and module cdn -->
+  <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <!-- Function of Javascript local rendering -->
+  <script src="js/index.js"></script>
+ </body>
+</html>

@@ -9,21 +9,43 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
     <title>PRMSU - College of Engineering | Website</title>
+    <style>
+            .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu {
+      display: block;
+    }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <header class="navbar-header">
         <div class="navbar-container">
-            <div class="nav-left">
-                <a href="#" class="nav-link">HOME</a>
-                <a href="#" class="nav-link">INSTRUCTION</a>
+            <a href="#" class="nav-link">HOME</a>
+            <div class="relative dropdown">
+                <a class="nav-link cursor-pointer" href="#" onclick="toggleDropdown(event, 'instructionDropdown')">INSTRUCTION</a>
+                <ul id="instructionDropdown" class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg hidden dropdown-menu">
+                    <li><a class="block px-5 py- hover:bg-gray-200 hover:text-orange-600" href="instruction-CO.html">Curricular Offerings</a></li>
+                    <li><a class="block px-5 py-2 hover:bg-gray-200 hover:text-orange-600" href="instruction-F.html">Faculty</a></li>
+                </ul>
+ 
             </div>
+            
             <div class="nav-center">
                 <img src="img/logo.png" alt="College of Engineering Logo" class="logo">
             </div>
             <div class="nav-right">
-                <a href="#" class="nav-link">RESEARCH</a>
-                <a href="#" class="nav-link">EXTENSION</a>
+                <li class="relative dropdown">
+                    <a class="nav-link hover:underline cursor-pointer hover:text-orange-600" href="#" onclick="toggleDropdown(event, 'researchDropdown')">RESEARCH</a>
+                    <ul id="researchDropdown" class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg hidden dropdown-menu">
+                      <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsce.html">BSCE</a></li>
+                      <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bscpe.html">BSCpE</a></li>
+                      <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsee.html">BSEE</a></li>
+                      <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsme.html">BSME</a></li>
+                      <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsem.html">BSEM</a></li>
+                    </ul>
+                </li>
+                  <li><a class="nav-link hover:underline  hover:text-orange-600" href="extension.html">EXTENSION</a></li>
+                  <li><a class="nav-link hover:underline hover:text-orange-600" href="history.html">HISTORY</a></li>
+                </ul>
                 <button class="search-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -47,15 +69,117 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">HOME</a>
-                    <a href="#" class="nav-link">INSTRUCTION</a>
-                    <a href="#" class="nav-link">RESEARCH</a>
-                    <a href="#" class="nav-link">EXTENSION</a>
-                </li>
+                <a href="#" class="nav-link">HOME</a>
+                <div class="relative dropdown">
+                    <a class="nav-link cursor-pointer" href="#" onclick="toggleDropdown(event, 'instructionDropdown')">INSTRUCTION</a>
+                    <ul id="instructionDropdown" class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg hidden dropdown-menu">
+                        <li><a class="block px-5 py- hover:bg-gray-200 hover:text-orange-600" href="instruction-CO.html">Curricular Offerings</a></li>
+                        <li><a class="block px-5 py-2 hover:bg-gray-200 hover:text-orange-600" href="instruction-F.html">Faculty</a></li>
+                    </ul>
+     
+                </div>
+                
+                <div class="nav-center">
+                    <img src="img/logo.png" alt="College of Engineering Logo" class="logo">
+                </div>
+                <div class="nav-right">
+                    <li class="relative dropdown">
+                        <a class="nav-link hover:underline cursor-pointer hover:text-orange-600" href="#" onclick="toggleDropdown(event, 'researchDropdown')">RESEARCH</a>
+                        <ul id="researchDropdown" class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-lg hidden dropdown-menu">
+                          <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsce.html">BSCE</a></li>
+                          <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bscpe.html">BSCpE</a></li>
+                          <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsee.html">BSEE</a></li>
+                          <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsme.html">BSME</a></li>
+                          <li><a class="block px-4 py-2 hover:bg-gray-200 hover:text-orange-600" href="research-bsem.html">BSEM</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link hover:underline  hover:text-orange-600" href="extension.html">EXTENSION</a></li>
+                    <li><a class="nav-link hover:underline hover:text-orange-600" href="history.html">HISTORY</a></li>
+                    </ul>
+                    <button class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
             </ul>
         </div>
     </nav>
+    <script>
+        function toggleDropdown(event, dropdownId) {
+          event.preventDefault();
+          const dropdown = document.getElementById(dropdownId);
+          dropdown.classList.toggle('hidden');
+          dropdown.parentElement.classList.toggle('open');
+        }
+    
+        document.addEventListener('click', function(e) {
+          const dropdowns = document.querySelectorAll('.dropdown-menu');
+          dropdowns.forEach(menu => {
+            if (!menu.contains(e.target) && !menu.previousElementSibling.contains(e.target)) {
+              menu.classList.add('hidden');
+              menu.parentElement.classList.remove('open');
+            }
+          });
+        });
+    
+        // Function to show/hide the search input field
+        function toggleSearchInput() {
+          const searchInput = document.getElementById("searchInput");
+          searchInput.classList.toggle("show");
+          if (searchInput.classList.contains("show")) {
+            searchInput.focus();
+          }
+        }
+    
+        // Function to handle Enter key press in search input
+        function handleSearchEnter(event) {
+          if (event.key === "Enter") {
+            const query = event.target.value;
+            if (query) {
+              window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+            }
+          }
+        }
+        // Select the search input element
+    
+        const searchButton = document.querySelector('.search-input');
+    
+        // Listen for the 'Enter' key press on the search input
+        searchButton.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            // Store the input value in localStorage
+            localStorage.setItem('searchQuery', searchButton.value);
+    
+            // Redirect to search.html
+            window.location.href = 'search.html';
+        }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('search');
+    
+            if (searchTerm) {
+                // Normalize search term for case-insensitive matching
+                const normalizedSearchTerm = searchTerm.toLowerCase();
+    
+                // Find the first element containing the search term
+                const allElements = document.body.querySelectorAll('*');
+                for (const el of allElements) {
+                    if (el.children.length === 0) {
+                        const textContent = el.textContent.toLowerCase();
+                        if (textContent.includes(normalizedSearchTerm)) {
+                            // Scroll to the element and optionally highlight it
+                            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            el.style.backgroundColor = '#ffebcc'; // Temporary highlight
+                            break;
+                        }
+                    }
+                }
+            }
+        });
+      </script>
     <!-- Hero Section -->
     <section class="hero">
         <img src="img/Banner.png" alt="Background Image" class="hero-bg">
@@ -73,27 +197,27 @@
         <h2 class="mb-4 text-center" style="color: #FE7741; font-weight: bolder;">GALLERY</h2>
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
-                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 1">
-                    <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 1" />
+                <a href="img\carousel4.jpg" data-lightbox="gallery" data-title="Gallery Image 1">
+                    <img src="img\carousel4.jpg" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 1" />
                 </a>
-                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 2">
-                    <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 2" />
+                <a href="img\carousel5.jpg" data-lightbox="gallery" data-title="Gallery Image 2">
+                    <img src="img\carousel5.jpg" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 2" />
                 </a>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 3">
-                    <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 3" />
+                <a href="img\carousel 6.jpg" data-lightbox="gallery" data-title="Gallery Image 3">
+                    <img src="img\carousel 6.jpg" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 3" />
                 </a>
-                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 4">
-                    <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 4" />
+                <a href="img\carousel1.jpg" data-lightbox="gallery" data-title="Gallery Image 4">
+                    <img src="img\carousel1.jpg" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 4" />
                 </a>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 5">
-                    <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 5" />
+                <a href="img\carousel2.jpg" data-lightbox="gallery" data-title="Gallery Image 5">
+                    <img src="img\carousel2.jpg" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 5" />
                 </a>
-                <a href="img/Banner.png" data-lightbox="gallery" data-title="Gallery Image 6">
-                    <img src="img/Banner.png" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 6" />
+                <a href="img\carousel3.jpg" data-lightbox="gallery" data-title="Gallery Image 6">
+                    <img src="img\carousel3.jpg" class="img-fluid shadow-1-strong rounded mb-4" alt="Gallery Image 6" />
                 </a>
             </div>
         </div>
@@ -142,91 +266,70 @@
             </div>
         </div>
     </div>
-    <!-- Announcement Section -->
-    <div class="container mt-3" style="max-width: 1293px;">
-        <div class="outer-container">
-            <h2 class="mb-2 mt-4 text-center"  style="color: #FE7741; font-weight: bolder;">ANNOUNCEMENT</h2>
-            <p class="text-center">List of latest announcements</p>
-            <!-- Card design for announcement -->
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card h-100 shadow">
-                        <img src="img/Banner.png" class="card-img-top mb-0" alt="">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
-                                        <span style="font-weight: normal;">Start Date: </span> 2024 - Nov - 14
-                                    </p>
-                                </div>
-                                <div class="col-6 text-right">
-                                    <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
-                                        <span style="font-weight: normal;">End Date: </span>2024 - Nov - 14
-                                    </p>
-                                </div>
+<!-- Announcement Section -->
+<div class="container mt-3 mb-5" style="max-width: 1293px; display: flex; justify-content: center;">
+    <div class="outer-container" style="width: 100%;">
+        <h2 class="mb-2 mt-4 text-center" style="color: #FE7741; font-weight: bolder;">ANNOUNCEMENT</h2>
+        <p class="text-center">List of latest announcements</p>
+        <!-- Card design for announcement -->
+        <div class="row justify-content-center">
+            <!-- First Card -->
+            <div class="col-12 col-sm-6 col-md-5 mb-4">
+                <div class="card h-100">
+                    <img src="img\Fish-crusher.png" class="card-img-top mb-0" alt="">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
+                                    <span style="font-weight: normal;">Start Date: </span> 2024 - Nov - 14
+                                </p>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h6 style="font-size: 16px;" class="card-title">Sample Announcement</h6>
-                                </div>
+                            <div class="col-6 text-right">
+                                <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
+                                    <span style="font-weight: normal;">End Date: </span>2024 - Nov - 14
+                                </p>
                             </div>
-                            <p class="card-text" style="text-align: justify; font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quo nisi odit accusantium reiciendis maxime veritatis totam porro sequi officia, repellat distinctio eius explicabo dignissimos, neque minima vel quia doloremque.</p>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h6 style="font-size: 16px;" class="card-title">BSME Department awards and demonstrates the Fish Crushing Machine to Laoag Kaunlaran Association</h6>
+                            </div>
+                        </div>
+                        <p class="card-text" style="text-align: justify; font-size: 14px;">The BSME Department awards and demonstrates the Fish Crushing Machine to Laoag Kaunlaran Association - Cooperative through the Regional Innovation Inclusive Cooperation Program between DTI, DOST, PRMSU and MSMED Council on the 14th of October 2023. This is a realization of the objectives of TEAM-UP EXTENSION PROGRAM parallel with the THRIVE agenda of the college with the goal, "A single step from COE, a hundred mouths fed in the community through upscaling and upgrading livelihood activities of small and medium enterprises in the Province of Zambales".</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card h-100 shadow">
-                        <img src="img/Banner.png" class="card-img-top mb-0" alt="">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
-                                        <span style="font-weight: normal;">Start Date: </span> 2024 - Nov - 14
-                                    </p>
-                                </div>
-                                <div class="col-6 text-right">
-                                    <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
-                                        <span style="font-weight: normal;">End Date: </span>2024 - Nov - 14
-                                    </p>
-                                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="col-12 col-sm-6 col-md-5 mb-4">
+                <div class="card h-100">
+                    <img src="Images\exam.png" class="card-img-top mb-0" alt="">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
+                                    <span style="font-weight: normal;">Start Date: </span> 2024 - Nov - 14
+                                </p>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h6 style="font-size: 16px;" class="card-title">Sample Announcement</h6>
-                                </div>
+                            <div class="col-6 text-right">
+                                <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
+                                    <span style="font-weight: normal;">End Date: </span>2024 - Nov - 14
+                                </p>
                             </div>
-                            <p class="card-text" style="text-align: justify; font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quo nisi odit accusantium reiciendis maxime veritatis totam porro sequi officia, repellat distinctio eius explicabo dignissimos, neque minima vel quia doloremque.</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card h-100 shadow">
-                        <img src="img/Banner.png" class="card-img-top mb-0" alt="">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
-                                        <span style="font-weight: normal;">Start Date: </span> 2024 - Nov - 14
-                                    </p>
-                                </div>
-                                <div class="col-6 text-right">
-                                    <p class="card-text mb-3" style="font-size: 10px; font-weight: bold; color: gray;">
-                                        <span style="font-weight: normal;">End Date: </span>2024 - Nov - 14
-                                    </p>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h6 style="font-size: 16px;" class="card-title">COE conducts Orientation and Gender Sensitivity Training</h6>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h6 style="font-size: 16px;" class="card-title">Sample Announcement</h6>
-                                </div>
-                            </div>
-                            <p class="card-text" style="text-align: justify; font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quo nisi odit accusantium reiciendis maxime veritatis totam porro sequi officia, repellat distinctio eius explicabo dignissimos, neque minima vel quia doloremque.</p>
                         </div>
+                        <p class="card-text" style="text-align: justify; font-size: 14px;">The PRMSU College of Engineering conducted the 2nd Batch of Orientation and Gender and Development (GAD) / Gender Sensitivity Training (GST) Seminar for Freshmen at the Science and Engineering Laboratory Building (SELB) Annex on October 20, 2022 with speakers Engr. Rue Lei Balicao and Engr. Cindy Dullas.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
     <!-- Google Maps -->
     <div class="container">
         <h3 class="text-center mb-4" style="color: #FE7741; font-weight: bolder;">OUR LOCATION</h3>

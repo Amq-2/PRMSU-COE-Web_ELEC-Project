@@ -75,6 +75,19 @@ a {
     color: #f57c00;
 }
 
+/* Remove bullet points or dots from navigation */
+.nav-right, .navbar-container ul {
+    list-style: none; /* Removes bullets from list items */
+    margin: 0; /* Removes any default margin */
+    padding: 0; /* Removes any default padding */
+}
+
+/* Ensure consistent styling for all nav-links */
+.nav-link {
+    text-decoration: none; /* Removes underlining */
+    display: inline-block; /* Aligns links like a block but keeps them inline */
+    padding: 10px; /* Adds spacing around the links */
+}
 .search-btn {
     background: none;
     border: none;
@@ -84,6 +97,21 @@ a {
 
 #navbar-mobile-view {
     display: none;
+}
+/* Ensure the list items and anchor links align to the left */
+ul {
+    padding-left: 0; /* Removes default left padding */
+    margin-left: 0; /* Removes any extra left margin */
+}
+
+li {
+    list-style: none; /* Removes any bullet points or markers */
+}
+
+a {
+    display: block; /* Makes the anchor tag take up the full width of the list item */
+    padding-left: 0; /* Ensures the text is left-aligned within the link */
+    text-align: left; /* Aligns the text to the left within the anchor */
 }
 
 /* Hero Section Styles */
