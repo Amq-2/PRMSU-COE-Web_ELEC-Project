@@ -287,51 +287,13 @@
           </div>
         </div>
     </footer>
-    <!-- Scripts -->
+    <!-- Scripts and module cdn -->
     <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script>
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'albumLabel': "Image %1 of %2"
-        });
-        $(".navbar-toggler").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.querySelector(".hamburger");
-            const mobileMenu = document.querySelector(".mobile-menu");
-
-            hamburger.addEventListener("click", function () {
-                mobileMenu.classList.toggle("active");
-                hamburger.classList.toggle("is-active");
-            });
-        });
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar-header');
-            const logo = document.querySelector('.nav-center .logo');
-            const scrollPosition = window.scrollY;
-            if (scrollPosition > 50) {
-                navbar.classList.add('navbar-fixed');
-                logo.style.position = 'absolute';
-                logo.style.top = '4px';
-                logo.style.left = '50%';
-                logo.style.transform = 'translateX(-50%)';
-                logo.style.height = '55px';
-            } else {
-                navbar.classList.remove('navbar-fixed');
-                logo.style.position = 'absolute';
-                logo.style.top = '-15px';
-                logo.style.left = '524px';
-                logo.style.transform = 'none';
-                logo.style.height = '110px';
-            }
-        });
-    </script>
+    <!-- Function of Javascript local rendering -->
+    <script src="js/index.js"></script>
 </body>
 </html>
