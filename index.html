@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <header class="navbar-header" style="margin-top: 30px;">
+    <header class="navbar-header">
         <div class="navbar-container">
             <div class="nav-left">
                 <a href="#" class="nav-link">HOME</a>
@@ -227,6 +227,7 @@
             </div>
         </div>
     </div>
+    <!-- Google Maps -->
     <div class="container">
         <h3 class="text-center mb-4" style="color: #FE7741; font-weight: bolder;">OUR LOCATION</h3>
         <div id="map" style="height: 500px; width: 100%;"></div>
@@ -296,7 +297,7 @@
         lightbox.option({
             'resizeDuration': 200,
             'wrapAround': true,
-            'albumLabel': "Image %1 of %2" // Optional: custom label for image count
+            'albumLabel': "Image %1 of %2"
         });
         $(".navbar-toggler").click(function(e) {
             e.preventDefault();
@@ -307,21 +308,28 @@
             const mobileMenu = document.querySelector(".mobile-menu");
 
             hamburger.addEventListener("click", function () {
-                mobileMenu.classList.toggle("active"); // Toggles the "active" class
-                hamburger.classList.toggle("is-active"); // Toggles the "is-active" class for animation
+                mobileMenu.classList.toggle("active");
+                hamburger.classList.toggle("is-active");
             });
         });
-        // JavaScript to make navbar fixed on scroll
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar-header');
+            const logo = document.querySelector('.nav-center .logo');
             const scrollPosition = window.scrollY;
-
             if (scrollPosition > 50) {
-                // Add fixed class when scrolling down
                 navbar.classList.add('navbar-fixed');
+                logo.style.position = 'absolute';
+                logo.style.top = '4px';
+                logo.style.left = '50%';
+                logo.style.transform = 'translateX(-50%)';
+                logo.style.height = '55px';
             } else {
-                // Remove fixed class when at the top
                 navbar.classList.remove('navbar-fixed');
+                logo.style.position = 'absolute';
+                logo.style.top = '-15px';
+                logo.style.left = '524px';
+                logo.style.transform = 'none';
+                logo.style.height = '110px';
             }
         });
     </script>
