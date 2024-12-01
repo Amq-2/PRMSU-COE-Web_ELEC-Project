@@ -54,12 +54,6 @@
                 <li><a class="nav-link hover:underline  hover:text-orange-600" href="extension.html">EXTENSION</a></li>
                 <li><a class="nav-link hover:underline hover:text-orange-600" href="history.html">HISTORY</a></li>
               </ul>
-              <button class="search-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  </svg>
-              </button>
           </div>
       </div>
   </header>
@@ -104,12 +98,6 @@
                   <li><a class="nav-link hover:underline  hover:text-orange-600" href="extension.html">EXTENSION</a></li>
                   <li><a class="nav-link hover:underline hover:text-orange-600" href="history.html">HISTORY</a></li>
                   </ul>
-                  <button class="search-btn">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <circle cx="11" cy="11" r="8"></circle>
-                          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                      </svg>
-                  </button>
               </div>
           </ul>
       </div>
@@ -131,81 +119,24 @@
           }
         });
       });
-  
-      // Function to show/hide the search input field
-      function toggleSearchInput() {
-        const searchInput = document.getElementById("searchInput");
-        searchInput.classList.toggle("show");
-        if (searchInput.classList.contains("show")) {
-          searchInput.focus();
-        }
-      }
-  
-      // Function to handle Enter key press in search input
-      function handleSearchEnter(event) {
-        if (event.key === "Enter") {
-          const query = event.target.value;
-          if (query) {
-            window.location.href = `search.html?query=${encodeURIComponent(query)}`;
-          }
-        }
-      }
-      // Select the search input element
-  
-      const searchButton = document.querySelector('.search-input');
-  
-      // Listen for the 'Enter' key press on the search input
-      searchButton.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-          // Store the input value in localStorage
-          localStorage.setItem('searchQuery', searchButton.value);
-  
-          // Redirect to search.html
-          window.location.href = 'search.html';
-      }
-      });
-      document.addEventListener('DOMContentLoaded', () => {
-          const urlParams = new URLSearchParams(window.location.search);
-          const searchTerm = urlParams.get('search');
-  
-          if (searchTerm) {
-              // Normalize search term for case-insensitive matching
-              const normalizedSearchTerm = searchTerm.toLowerCase();
-  
-              // Find the first element containing the search term
-              const allElements = document.body.querySelectorAll('*');
-              for (const el of allElements) {
-                  if (el.children.length === 0) {
-                      const textContent = el.textContent.toLowerCase();
-                      if (textContent.includes(normalizedSearchTerm)) {
-                          // Scroll to the element and optionally highlight it
-                          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                          el.style.backgroundColor = '#ffebcc'; // Temporary highlight
-                          break;
-                      }
-                  }
-              }
-          }
-      });
+
     </script>
   <main class="p-4 mt-16 flex-grow">
    <div class="bg-white p-4">
     <a class="text-orange-500" href="#">
      Instruction
-    </a>
-    &gt;&gt; Curricular Offerings
+    </a>Curricular Offerings
    </div>
    <div class="bg-orange-500 text-white text-center py-2">
-    <h2 class="text-2xl font-bold">
-     Curricular Offerings
+    <h2 class="text-2xl font-bold"> Curricular Offerings
     </h2>
    </div>
-   <div class="bg-gray-200 p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 text-center">
+   <div class="bg-gray-200 p-8 grid grid-flow-row grid-cols-5 gap-4 text-center">
     <div>
      <h3 class="text-orange-500 font-bold">
       Civil Engineering
      </h3>
-     <ul class="text-left">
+     <ul class="text-start ml-4">
       <li>
        <a class="text-black hover:text-orange-500" href="https://drive.google.com/file/d/1ZH8c4FtWYCm8Nr4K_vpJQIwBj21ouwMF/view">
         CMO
@@ -242,7 +173,7 @@
      <h3 class="text-orange-500 font-bold">
       Computer Engineering
      </h3>
-     <ul class="text-left">
+     <ul class="text-start ml-4">
       <li>
        <a class="text-black hover:text-orange-500" href="https://drive.google.com/file/d/1ZH8c4FtWYCm8Nr4K_vpJQIwBj21ouwMF/view">
         CMO
@@ -274,7 +205,7 @@
      <h3 class="text-orange-500 font-bold">
       Electrical Engineering
      </h3>
-     <ul class="text-left">
+     <ul class="text-start ml-4">
       <li>
        <a class="text-black hover:text-orange-500" href="https://drive.google.com/file/d/1qLqbyQsWhAR4IApHhksulj6FhU9msxt5/view">
         CMO
@@ -311,7 +242,7 @@
      <h3 class="text-orange-500 font-bold">
       Mechanical Engineering
      </h3>
-     <ul class="text-left">
+     <ul class="text-start ml-4">
       <li>
        <a class="text-black hover:text-orange-500" href="https://drive.google.com/file/d/13MkQIMg18aMg15J5GcpQ22gxoi4E-WhN/view?usp=share_link">
         CMO
@@ -348,7 +279,7 @@
      <h3 class="text-orange-500 font-bold">
       Mining Engineering
      </h3>
-     <ul class="text-left">
+     <ul class="text-start ml-4">
       <li>
        <a class="text-black hover:text-orange-500" href="https://drive.google.com/file/d/1G80jfNY3p823SDnztj9GnFhS3KI8dwSe/view?usp=sharing">
         CMO
@@ -385,7 +316,7 @@
           </div>
           <!-- Social media icon -->
           <div class="col-md-3 text-md-right text-center mt-3 mt-md-0">
-            <a href="https://www.facebook.com/profile.php?id=100057567874785" target="_blank">
+            <a href="https://www.facebook.com/prmsucoe" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook"
                    viewBox="0 0 24 24">
                 <path d="M9 8H6v4h3v12h5V12h4l1-4h-5V6c0-1 .334-1 1-1h3V0h-4c-3 0-4 1-4 4v4z"/>

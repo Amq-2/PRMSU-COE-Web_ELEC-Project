@@ -113,6 +113,48 @@ a {
     padding-left: 0; /* Ensures the text is left-aligned within the link */
     text-align: left; /* Aligns the text to the left within the anchor */
 }
+/* Style for main navigation link */
+.nav-link {
+    color: #444; /* Default color */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #FE7741; /* Hover color */
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    color: #555; /* Default dropdown item color */
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    color: #FE7741; /* Hover text color for dropdown items */
+    background-color: #f9f9f9; /* Optional hover background */
+}
+
+/* Show dropdown menu */
+.dropdown-menu.show {
+    display: block;
+}
 
 /* Hero Section Styles */
 .hero {

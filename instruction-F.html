@@ -56,12 +56,6 @@
                 <li><a class="nav-link hover:underline  hover:text-orange-600" href="extension.html">EXTENSION</a></li>
                 <li><a class="nav-link hover:underline hover:text-orange-600" href="history.html">HISTORY</a></li>
               </ul>
-              <button class="search-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  </svg>
-              </button>
           </div>
       </div>
   </header>
@@ -106,12 +100,6 @@
                   <li><a class="nav-link hover:underline  hover:text-orange-600" href="extension.html">EXTENSION</a></li>
                   <li><a class="nav-link hover:underline hover:text-orange-600" href="history.html">HISTORY</a></li>
                   </ul>
-                  <button class="search-btn">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <circle cx="11" cy="11" r="8"></circle>
-                          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                      </svg>
-                  </button>
               </div>
           </ul>
       </div>
@@ -134,69 +122,13 @@
         });
       });
   
-      // Function to show/hide the search input field
-      function toggleSearchInput() {
-        const searchInput = document.getElementById("searchInput");
-        searchInput.classList.toggle("show");
-        if (searchInput.classList.contains("show")) {
-          searchInput.focus();
-        }
-      }
-  
-      // Function to handle Enter key press in search input
-      function handleSearchEnter(event) {
-        if (event.key === "Enter") {
-          const query = event.target.value;
-          if (query) {
-            window.location.href = `search.html?query=${encodeURIComponent(query)}`;
-          }
-        }
-      }
-      // Select the search input element
-  
-      const searchButton = document.querySelector('.search-input');
-  
-      // Listen for the 'Enter' key press on the search input
-      searchButton.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-          // Store the input value in localStorage
-          localStorage.setItem('searchQuery', searchButton.value);
-  
-          // Redirect to search.html
-          window.location.href = 'search.html';
-      }
-      });
-      document.addEventListener('DOMContentLoaded', () => {
-          const urlParams = new URLSearchParams(window.location.search);
-          const searchTerm = urlParams.get('search');
-  
-          if (searchTerm) {
-              // Normalize search term for case-insensitive matching
-              const normalizedSearchTerm = searchTerm.toLowerCase();
-  
-              // Find the first element containing the search term
-              const allElements = document.body.querySelectorAll('*');
-              for (const el of allElements) {
-                  if (el.children.length === 0) {
-                      const textContent = el.textContent.toLowerCase();
-                      if (textContent.includes(normalizedSearchTerm)) {
-                          // Scroll to the element and optionally highlight it
-                          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                          el.style.backgroundColor = '#ffebcc'; // Temporary highlight
-                          break;
-                      }
-                  }
-              }
-          }
-      });
     </script>
 
   <main class="p-4 mt-16">
    <div class="text-sm text-gray-600 mb-4">
     <a class="text-blue-600" href="#">
      Instruction
-    </a>
-    &gt;&gt; Faculty
+    </a>Faculty
    </div>
    <section class="mb-8">
     <div class="bg-orange-600 text-white p-4">
@@ -524,7 +456,7 @@
           </div>
           <!-- Social media icon -->
           <div class="col-md-3 text-md-right text-center mt-3 mt-md-0">
-            <a href="https://www.facebook.com/profile.php?id=100057567874785" target="_blank">
+            <a href="https://www.facebook.com/prmsucoe" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook"
                    viewBox="0 0 24 24">
                 <path d="M9 8H6v4h3v12h5V12h4l1-4h-5V6c0-1 .334-1 1-1h3V0h-4c-3 0-4 1-4 4v4z"/>
